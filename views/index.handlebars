@@ -1,32 +1,34 @@
-<h1>Burgers</h1>
+<h1 class="card-header">Burgers</h1>
 
-<h2>Available Burgers</h2>
+<div class="card-body">
+  <h2 class="card-title">Available Burgers</h2>
 
-<ul>
-  {{#each burgers}}
+  <ul>
+    {{#each burgers}}
     {{#unless dataValues.devoured}}
-      {{> burger-block devoured=true}}
+    {{> burger-block devoured=true}}
     {{/unless}}
-  {{/each}}
-</ul>
+    {{/each}}
+  </ul>
 
-<h2>Already eaten</h2>
+  <h2 class="card-title">Already eaten</h2>
 
-<ul>
-  {{#each burgers}}
+  <ul>
+    {{#each burgers}}
     {{#if dataValues.devoured}}
-      {{> burger-block devoured=false}}
+    {{> burger-block devoured=false}}
     {{/if}}
-  {{/each}}
-</ul>
+    {{/each}}
+  </ul>
 
-<h2>Add a Burger</h2>
-<form class="create-form">
+  <h2 class="card-title">Add a Burger</h2>
+  <form class="create-form">
 
-  <div class="form-group">
-    <label for="newBurger">Burger</label>
-    <input type="text" id="newBurger" name="Burger">
-  </div>
+    <div class="form-group">
+      <label for="newBurger">Burger</label>
+      <input type="text" class="form-control" placeholder="Burger?" id="newBurger" name="Burger">
+    </div>
 
-  <button id="subBtn" type="submit">Submit</button>
-</form>
+    <button class="btn btn-primary" id="subBtn" type="submit">Submit</button>
+  </form>
+</div>

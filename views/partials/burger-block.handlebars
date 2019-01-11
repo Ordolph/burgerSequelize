@@ -1,7 +1,7 @@
 <li>
     {{dataValues.burger_name}}
 
-    <button {{#if dataValues.devoured}} class="delete" {{else}} class="devour" {{/if}} data-id="{{dataValues.id}}" data-eaten="{{dataValues.devoured}}">
+    <button {{#if dataValues.devoured}} class="delete btn btn-danger" {{else}} class="devour btn btn-primary" {{/if}} data-id="{{dataValues.id}}" data-eaten="{{dataValues.devoured}}">
         {{#if dataValues.devoured}}Delete{{else}}Devour{{/if}}
     </button>
     <br><br>
