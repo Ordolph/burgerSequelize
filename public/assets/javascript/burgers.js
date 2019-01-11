@@ -1,13 +1,12 @@
 $(function () {
+    // Sends put request and id to controller when devour button is pushed
     $(".devour").on("click", function (event) {
         event.preventDefault();
 
         var idv = $(this).data("id");
-
         var id = {
             id: idv
         };
-
         console.log(id);
 
         $.ajax("/", {
@@ -20,16 +19,14 @@ $(function () {
             }
         );
     });
-
+    // Sends delete request and id to controller when delete button pressed
     $(".delete").on("click", function (event) {
         event.preventDefault();
 
         var idv = $(this).data("id");
-
         var id = {
             id: idv
         };
-
         console.log(id);
 
         $.ajax("/", {
@@ -42,7 +39,7 @@ $(function () {
             }
         );
     });
-
+    // Sends post request to controller with relevant information when submit button is pressed
     $('#subBtn').on("click", function (event) {
         event.preventDefault();
 
@@ -63,20 +60,5 @@ $(function () {
     })
 
 });
-
-
-
-
-// $(document).on('click', '.devour'), function (event) {
-//     var id = $(this).data('id');
-//     console.log("click")
-//     $.ajax('/', {
-//         type: 'PUT',
-//         data: id
-//     }).then(function () {
-//         console.log('Devoured');
-//         location.reload();
-//     });
-// };
 
 console.log('Loaded');
